@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+  <data>
+
+      <record model="ir.ui.view" id="product_view_form">
+          <field name="name">product.form</field>
+          <field name="model">product.points</field>
+          <field name="arch" type="xml">
+              <form string="Product Form">
+                  <sheet>
+                      <group>
+                          <field name="name"/>
+                      </group>
+                      <group>
+                          <field name="start_date"/>
+                      </group>
+                      <group>
+                          <field name="end_date"/>
+                      </group>
+                      <group>
+                          <field name="points"/>
+                      </group>
+                      <group>
+                          <field name="Status"/>
+                      </group>
+                      <group>
+                          <field name="user_id"/>
+                      </group>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+      <record id="product_tree_view" model="ir.ui.view">
+          <field name="name">product.points.tree</field>
+          <field name="model">product.points</field>
+          <field name="arch" type="xml">
+              <tree string="Product Tree">
+                  <field name="name"/>
+                  <field name="start_date"/>
+                  <field name="end_date"/>
+                  <field name="points"/>
+                  <field name="Status"/>
+                  <field name="user_id"/>
+              </tree>
+          </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="product_list_action">
+      <field name="name">Products</field>
+      <field name="res_model">product.points</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first product
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="parent_product_menu" name="Product Points"/>
+
+    <menuitem id="child_product_menu" name="Product" parent="parent_product_menu"/>
+
+    <menuitem id="Create_product_menu" name="Create Product" parent="child_product_menu"
+              action="product_list_action"/>
+
+  </data>
+</odoo>

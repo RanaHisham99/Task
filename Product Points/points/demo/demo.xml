@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <record model="product.points" id="product_point_record_001">
+            <field name="name">Product 1</field>
+            <field name="start_date">1/8/2022</field>
+            <field name="end_date">10/8/2022</field>
+            <field name="points">100</field>
+        </record>
+
+        <record model="product.points" id="product_point_record_002">
+            <field name="name">Product 2</field>
+            <field name="start_date">11/8/2022</field>
+            <field name="end_date">20/8/2022</field>
+            <field name="points">75</field>
+        </record>
+
+<!--
+          <record id="object0" model="points.points">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="points.points">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="points.points">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="points.points">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="points.points">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+-->
+    </data>
+</odoo>
